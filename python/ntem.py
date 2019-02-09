@@ -5,9 +5,25 @@
 # It depends upon the mdbtools suite:
 #   http://sourceforge.net/projects/mdbtools/
 
-import sys, subprocess # the subprocess module is new in python v 2.4
+# original py script
+# http://mazamascience.com/WorkingWithData/?p=168
+# source
+import sys, subprocess # python v 2.4
+import os.path
+from colour import bcolors
+
+if(len(sys.argv) != 2):
+  sys.exit(sys.argv[0] + " takes one argument.")
 
 DATABASE = sys.argv[1]
+
+if(not DATABASE.endswith(".mdb")):
+  sys.exit("Argument file must be in .mdb")
+
+if(not os.path.isfile(DATABASE) ):
+  sys.exit(
+    bcolors.FAIL + sys.argv[1] + " does not exist." +
+    bcolors.FAIL)
 
 # Get the list of table names with "mdb-tables"
 table_names = subprocess.Popen(["mdb-tables", "-1", DATABASE],
