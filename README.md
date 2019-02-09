@@ -1,7 +1,7 @@
 NTEM dataset liberated from mdb
 ================
 
-Scripts to librate NTEM mdb files.
+Scripts to librate NTEM mdb files using [mdbtools](https://github.com/brianb/mdbtools).
 
 stats19 did a great job, this could also do a similar job. Let's think of non-R users too.
 
