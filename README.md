@@ -1,7 +1,5 @@
-
-------------------------------------------------------------------------
-
-output: github\_document ---
+NTEM dataset liberated from mdb
+================
 
 Scripts to librate NTEM mdb files.
 
@@ -17,5 +15,6 @@ But...lets think of non R users too
 -   R
 -   bash
 -   python
+    -   The name comes from this [blog](http://mazamascience.com/WorkingWithData/?p=168) post and included python scripts too.
 
 too
